@@ -9,7 +9,31 @@ namespace Atbash_cipher_project
 {
     internal class Program
     {
-        static int WarningCounter(string text)
+ 
+        
+        static string AtbashSDecrypt(string text)
+        {
+            string result = "";
+            char decrypt;
+
+            foreach (char c in text)
+            {
+                if (char.IsLetter(c))
+                {
+                    decrypt = (char) ('z' - (char.ToLower(c) - 'a'));
+                    result += decrypt;
+                }
+                else
+                {
+                    result += c;   
+                }
+            }
+            
+            return result;
+        }
+        
+      
+         static int WarningCounter(string text)
         {
             string[] dangerousWords = { "bomb", "nukhba", "fighter", "rocket", "secret" };
             string[] splitText = text.Split(' ');
@@ -25,9 +49,9 @@ namespace Atbash_cipher_project
             return point;
         }
 
-        
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
+
+            }
         }
     }
-}
