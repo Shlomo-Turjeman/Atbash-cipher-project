@@ -8,8 +8,31 @@ using System.Threading.Tasks;
 namespace Atbash_cipher_project
 {
     internal class Program
-    {
-        static void WarningCount(string text, int point)
+    { 
+      
+        static string AtbashSDecrypt(string text)
+        {
+            string result = "";
+            char decrypt;
+
+            foreach (char c in text)
+            {
+                if (char.IsLetter(c))
+                {
+                    decrypt = (char) ('z' - (char.ToLower(c) - 'a'));
+                    result += decrypt;
+                }
+                else
+                {
+                    result += c;   
+                }
+            }
+            
+            return result;
+        }
+        
+      
+         static int WarningCounter(string text)
         {
             string warning = "";
 
@@ -29,9 +52,9 @@ namespace Atbash_cipher_project
             Console.WriteLine($"Message: {text} \nWorning: {warning} \nTotal points: {point}");
         }
 
-        
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
+
+            }
         }
     }
-}
