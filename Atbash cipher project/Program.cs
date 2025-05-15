@@ -9,7 +9,7 @@ namespace Atbash_cipher_project
 {
     internal class Program
     {
-        static void WarningCount(string text, int point)
+        static void FinalPrint(string text, int point)
         {
             string warning = "";
 
