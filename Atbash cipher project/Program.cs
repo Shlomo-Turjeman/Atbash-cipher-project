@@ -9,6 +9,8 @@ namespace Atbash_cipher_project
 {
     internal class Program
     {
+      
+        
         static void FinalPrint(string text, int point)
         {
             string warning = "";
@@ -29,9 +31,9 @@ namespace Atbash_cipher_project
             Console.WriteLine($"Message: {text} \nWorning: {warning} \nTotal points: {point}");
         }
 
-        
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
+
+            }
         }
     }
-}
