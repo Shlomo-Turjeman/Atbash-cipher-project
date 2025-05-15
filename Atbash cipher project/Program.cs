@@ -9,20 +9,24 @@ namespace Atbash_cipher_project
 {
     internal class Program
     {
-        static int WarningCounter(string text)
+        static void WarningCount(string text, int point)
         {
-            string[] dangerousWords = { "bomb", "nukhba", "fighter", "rocket", "secret" };
-            string[] splitText = text.Split(' ');
-            int point = 0;
+            string warning = "";
 
-            foreach(string word in splitText)
+            if (point >= 1 && point <= 5)
             {
-                if (dangerousWords.Contains(word))
-                {
-                    point++;
-                }
+                warning = "WARNING";
             }
-            return point;
+            else if (point >= 6 && point <= 10)
+            {
+                warning = "DANGER";
+            }
+            else if (point >= 11 && point <= 15)
+            {
+                warning = "ULTRA DANGER";
+            }
+
+            Console.WriteLine($"Message: {text} \nWorning: {warning} \nTotal points: {point}");
         }
 
         
