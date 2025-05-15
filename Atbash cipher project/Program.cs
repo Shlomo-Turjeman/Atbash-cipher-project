@@ -47,6 +47,27 @@ namespace Atbash_cipher_project
             return point;
         }
 
+
+        static void FinalPrint(string text, int point)
+        {
+            string warning = "";
+
+            if (point >= 1 && point <= 5)
+            {
+                warning = "WARNING";
+            }
+            else if (point >= 6 && point <= 10)
+            {
+                warning = "DANGER";
+            }
+            else if (point >= 11 && point <= 15)
+            {
+                warning = "ULTRA DANGER";
+            }
+
+            Console.WriteLine($"Message: {text} \nWorning: {warning} \nTotal points: {point}");
+        }
+
         static void Main(string[] args)
             {
 
